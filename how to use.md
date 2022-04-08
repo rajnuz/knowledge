@@ -1,13 +1,6 @@
-# 标题1
-这是标题1下的内容
-## 标题2
-这是标题2下的内容
-dadawd
-![图片](/asset/test-0.png)
-
-`行内代码`
-
-
+# 插入行内代码
+我要插入行内高亮代码 `hello()`,插入完成
+# 插入代码段
 ```java
   public CassandraFilter copy(RelTraitSet traitSet, RelNode input,
       RexNode condition) {
@@ -15,6 +8,11 @@ dadawd
         partitionKeys, clusteringKeys, implicitFieldCollations);
   }
 ``` 
+# 插入图片
+图片请放到asset文件夹内
+![图片](/asset/test-0.png)
+
+
 
 
 
