@@ -63,3 +63,19 @@ kubectl delete po ${pod name}
 ```shell
 clickhouse-client -h 127.0.0.1 --database="${db name}" --query="select * from ${db name}.${table name} FORMAT CSV" > ${导出的文件路径及名称} 
 ```
+
+## 从容器中看java 镜像的环境变量
+
+当我们在Dockerfile里写了环境变量时：
+
+```docker
+ENV APP_NAME="@project.artifactId@"
+```
+
+如何检查容器中环境变量名是否正确呢：
+
+在k8s中进入容器shell，然后输入
+
+```shell
+echo $APP_NAME
+```
