@@ -79,3 +79,29 @@ ENV APP_NAME="@project.artifactId@"
 ```shell
 echo $APP_NAME
 ```
+
+## 查询一个namespace下面的资源消耗
+
+```shell
+kubectl resource-capacity --util --pods | grep ${namespace}
+```
+
+结果展示
+![图 1](asset_IMG/%20k8s/IMG_20220627-141149624.png)  
+
+6列分别是：cpu request， cpu limit，cpu usage，memory request， memory limit，memory usage. 每行都是一个pod
+
+## 查询各个worker的资源
+
+```shell
+kubectl resource-capacity --util
+```
+
+![图 2](asset_IMG/%20k8s/IMG_20220627-141628584.png)  
+
+
+## 查询各个worker 各个pod的资源
+
+```shell
+kubectl resource-capacity --util --pods
+```
