@@ -99,9 +99,14 @@ kubectl resource-capacity --util
 
 ![图 2](asset_IMG/%20k8s/IMG_20220627-141628584.png)  
 
-
 ## 查询各个worker 各个pod的资源
 
 ```shell
 kubectl resource-capacity --util --pods
+```
+
+## 查询某个服务的资源
+
+```shell
+kubectl resource-capacity --util --pods | grep ${服务名}
 ```
