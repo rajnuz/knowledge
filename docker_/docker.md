@@ -60,3 +60,17 @@ docker run -d -p 8182:8182 --name docker-gremlin -v//d/dockerVolume/data/gremlin
 ```shell
 docker run -d --name docker-clickhouse -p 8123:8123 -p 9000:9000 -p 9009:9009 -v//d/dockerVolume/data/clickhouse:/var/lib/clickhouse --ulimit nofile=262144:262144 yandex/clickhouse-server
 ```
+
+## tag
+
+docker 给已有镜像打新tag
+
+```shell
+docker tag ${old iamge name} ${new iamge name}
+```
+
+## push
+
+```shell
+docker push ${镜像完整名称}
+```
