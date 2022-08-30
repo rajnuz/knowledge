@@ -110,3 +110,9 @@ kubectl resource-capacity --util --pods
 ```shell
 kubectl resource-capacity --util --pods | grep ${服务名}
 ```
+
+## 修改k8s当前context的namespace（使用场景不多
+
+```shell
+kubectl config set-context --current --namespace=${namespace}
+```
