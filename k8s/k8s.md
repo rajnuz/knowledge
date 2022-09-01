@@ -116,3 +116,11 @@ kubectl resource-capacity --util --pods | grep ${服务名}
 ```shell
 kubectl config set-context --current --namespace=${namespace}
 ```
+
+## 查看pod日志
+
+```shell
+kubectl logs ${pod name} -n ${namespace name} -f
+```
+
+`-f`的作用是持续输出日志
