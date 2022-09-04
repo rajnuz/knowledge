@@ -115,3 +115,39 @@ git tag ${tag名称}
 git tag
 ```
 
+## 同步fork原仓库
+
+当我们fork了原仓库后，同步原仓库新的一些提交时：
+
+### 在本地查看当前项目remote信息
+
+```shell
+git remote -v
+```
+
+### 添加upstream
+
+结果中如果只有origin 的fetch 和 pull 两条记录，说明还未设置upstream
+可以设置远程upstream至fork的原仓库
+
+```shell
+git remove -add upstream ${fork的原远程git}
+```
+
+这一步的结果是看到了使用`git remote -v`可以看到了upstream的pull 和fetch
+
+### 抓取原仓库
+
+```shell
+git fetch upstream
+```
+
+这一步的结果看到log中显示fork的原仓库的新增branch
+
+### 合并
+
+切换到本地想要合并的分支，合并upstream拉取的分支:
+
+```shell
+git merge upstream/${fork 的仓库中的branch名字}
+```
