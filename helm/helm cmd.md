@@ -21,3 +21,22 @@ helm delete janus -n ${namespace name}
 ```
 
 这个命令会删除该namespace下面所有基于这个release的内容
+
+## helm 更新
+
+当我们更新了使用helm部署的一些东西时，例如修改了某个java服务的application.yaml
+
+```shell
+helm upgrade --install ${helm release} -n mis ${helm包的位置}
+```
+
+--install的作用是，如果没有就install，如果有就替换
+helm包的位置可以试官网的，也可以是本地一个路径
+
+## helm list
+
+查看部署的helm内容
+
+```shell
+helm list -n ${namespace}
+```
