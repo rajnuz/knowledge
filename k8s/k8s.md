@@ -124,3 +124,19 @@ kubectl logs ${pod name} -n ${namespace name} -f
 ```
 
 `-f`的作用是持续输出日志
+
+## 删除pvc
+
+``` shell
+kubectl delete pvc ${pvc名称} -n ${namespace名称}
+```
+
+## 以yaml形式查看资源的文件
+
+```shell
+查看statefulset
+kubectl get statefulset ${statefulset 名字} -n ${namespace} -o yaml
+
+查看pod
+kubectl get pod ${pod 名字} -n ${namespace} -o yaml
+```
