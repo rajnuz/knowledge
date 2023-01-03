@@ -12,6 +12,12 @@
 docker run --name docker-mongo -p 27018:27017 -v //d/dockerVolume/data/mongo:/data/db -v //d/dockerVolume/config/mongo:/data/configdb  -d mongo:latest 
 ```
 
+#### redis
+
+```shell
+docker run --name docker-redis -p 16379:6379 -v D:\dockerVolume\redis  -d redis:latest
+```
+
 #### mysql
 
 ```shell
