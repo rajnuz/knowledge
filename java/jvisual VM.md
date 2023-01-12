@@ -1,8 +1,12 @@
 # J visual VM 使用
 
-[TOC]
+- [J visual VM 使用](#j-visual-vm-使用)
+  - [关于 J Visual VM](#关于-j-visual-vm)
+  - [查看进程调用关系和耗时](#查看进程调用关系和耗时)
 
-##关于 J Visual VM
+---
+
+## 关于 J Visual VM
 
 J visual VM 是jdk自带工具，位置在jdk/bin路径下
 打开后可以看到正在跑的application

@@ -1,6 +1,10 @@
 # idea 提速
 
-[toc]
+- [idea 提速](#idea-提速)
+  - [.var](#var)
+  - [reload改动](#reload改动)
+
+---
 
 ## .var
 

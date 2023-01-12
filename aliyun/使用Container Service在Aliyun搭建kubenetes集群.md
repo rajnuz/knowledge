@@ -1,6 +1,17 @@
 # 使用aliyun Container Service
 
-[toc]
+- [使用aliyun Container Service](#使用aliyun-container-service)
+  - [创建集群](#创建集群)
+  - [增加screts](#增加screts)
+  - [连接集群](#连接集群)
+    - [绑定ip](#绑定ip)
+    - [找到aliyun集群的连接信息](#找到aliyun集群的连接信息)
+    - [更改config文件](#更改config文件)
+  - [查看aliyun的storage class](#查看aliyun的storage-class)
+  - [检查状态](#检查状态)
+  - [disk设置](#disk设置)
+
+---
 
 ## 创建集群
 

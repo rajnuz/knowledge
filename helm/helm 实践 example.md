@@ -1,6 +1,9 @@
 # helm 实践
 
-[toc]
+- [helm 实践](#helm-实践)
+  - [安装mongodb](#安装mongodb)
+
+---
 
 ## 安装mongodb
 

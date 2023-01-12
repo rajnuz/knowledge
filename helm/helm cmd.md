@@ -1,6 +1,12 @@
 # Helm 命令
 
-[toc]
+- [Helm 命令](#helm-命令)
+  - [helm 安装](#helm-安装)
+  - [helm 删除](#helm-删除)
+  - [helm 更新](#helm-更新)
+  - [helm list](#helm-list)
+
+---
 
 ## helm 安装
 

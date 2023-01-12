@@ -1,6 +1,8 @@
 # idea的缓存清理
 
-[toc]
+- [idea的缓存清理](#idea的缓存清理)
+
+---
 
 当在idea中调整了包目录等操作后，可能会导致import失败。即使import路径名称正确，依然无法import，import处类名是红色的，此时需要清理idea cache
 

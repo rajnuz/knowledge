@@ -1,6 +1,10 @@
 # how to save github md file to notion?
 
-[toc]
+- [how to save github md file to notion?](#how-to-save-github-md-file-to-notion)
+  - [工具](#工具)
+  - [配置](#配置)
+
+---
 
 ## 工具
 

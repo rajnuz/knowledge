@@ -1,6 +1,13 @@
 # linux 命令
 
-[toc]
+- [linux 命令](#linux-命令)
+  - [vi](#vi)
+    - [搜索](#搜索)
+    - [替换](#替换)
+    - [删除swap文件](#删除swap文件)
+  - [explorer](#explorer)
+
+---
 
 ## vi
 
