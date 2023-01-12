@@ -1,6 +1,32 @@
 # k8s 命令
 
-[TOC]
+- [k8s 命令](#k8s-命令)
+  - [官方文档](#官方文档)
+  - [查看容器](#查看容器)
+  - [描述容器](#描述容器)
+  - [查看部署应用](#查看部署应用)
+  - [删除部署应用](#删除部署应用)
+  - [拷出pod中的文件](#拷出pod中的文件)
+  - [通过端口快速找到服务](#通过端口快速找到服务)
+  - [查看namespace](#查看namespace)
+  - [进入pod](#进入pod)
+  - [删掉pod](#删掉pod)
+  - [导出k8s中clickhouse数据库的数据 存为.csv](#导出k8s中clickhouse数据库的数据-存为csv)
+  - [从容器中看java 镜像的环境变量](#从容器中看java-镜像的环境变量)
+  - [查询一个namespace下面的资源消耗](#查询一个namespace下面的资源消耗)
+  - [查询各个worker的资源](#查询各个worker的资源)
+  - [查询各个worker 各个pod的资源](#查询各个worker-各个pod的资源)
+  - [查询某个服务的资源](#查询某个服务的资源)
+  - [修改k8s当前context的namespace（使用场景不多](#修改k8s当前context的namespace使用场景不多)
+  - [查看pod日志](#查看pod日志)
+  - [删除pvc](#删除pvc)
+  - [以yaml形式查看资源的文件](#以yaml形式查看资源的文件)
+
+---
+
+## 官方文档
+
+[link](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 
 ## 查看容器
 

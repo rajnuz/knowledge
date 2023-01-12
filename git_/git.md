@@ -1,6 +1,22 @@
 # git
 
-[toc]
+- [git](#git)
+  - [branch](#branch)
+  - [pull](#pull)
+  - [push](#push)
+  - [stash](#stash)
+  - [add](#add)
+  - [commit](#commit)
+  - [reset](#reset)
+  - [tag](#tag)
+  - [同步fork原仓库](#同步fork原仓库)
+    - [在本地查看当前项目remote信息](#在本地查看当前项目remote信息)
+    - [添加upstream](#添加upstream)
+    - [抓取原仓库](#抓取原仓库)
+    - [合并](#合并)
+
+---
+
 [git 指导链接](https://git-scm.com/book/zh/v2)
 
 [在idea中使用git](../idea_/git%20in%20idea.md)
@@ -131,7 +147,7 @@ git remote -v
 可以设置远程upstream至fork的原仓库
 
 ```shell
-git remove -add upstream ${fork的原远程git}
+git remote -add upstream ${fork的原远程git}
 ```
 
 这一步的结果是看到了使用`git remote -v`可以看到了upstream的pull 和fetch
