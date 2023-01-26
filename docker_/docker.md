@@ -9,6 +9,7 @@
       - [postgres](#postgres)
       - [gremlin](#gremlin)
       - [clickhouse](#clickhouse)
+      - [mariadb](#mariadb)
     - [sleep](#sleep)
   - [tag](#tag)
   - [push](#push)
@@ -83,6 +84,12 @@ docker run -d -p 8182:8182 --name docker-gremlin -v//d/dockerVolume/data/gremlin
 
 ```shell
 docker run -d --name docker-clickhouse -p 8123:8123 -p 9000:9000 -p 9009:9009 -v//d/dockerVolume/data/clickhouse:/var/lib/clickhouse --ulimit nofile=262144:262144 yandex/clickhouse-server
+```
+
+#### mariadb
+
+```bash
+docker run --name docker-mariadb -p 13306:3306 -v //d/dockerVolume/data/mariadb:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d mariadb:latest
 ```
 
 ### sleep
