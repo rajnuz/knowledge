@@ -2,6 +2,7 @@
 
 - [Docker command](#docker-command)
   - [run](#run)
+    - [option](#option)
     - [example](#example)
       - [mongo](#mongo)
       - [redis](#redis)
@@ -14,10 +15,20 @@
   - [tag](#tag)
   - [push](#push)
   - [拷贝](#拷贝)
+  - [commit](#commit)
 
 ---
 
 ## run
+
+### option
+
+`--rm` : remove the container after exits
+you can enter the container runtime:
+
+```bash
+docker run -it --rm ${image} bash
+```
 
 ### example
 
@@ -132,4 +143,12 @@ docker exec -it ${pod id} bash
 
 ```shell
 docker cp ${pod id}:${pod 内 jar的绝对路径} ${拷贝出来的绝对路径 文件名}
+```
+
+## commit
+
+提交对于某个容器的修改，生成新的image
+
+```bash
+docker commit  ${containerID}
 ```
