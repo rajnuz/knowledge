@@ -12,6 +12,7 @@
       - [clickhouse](#clickhouse)
       - [mariadb](#mariadb)
     - [sleep](#sleep)
+    - [mount](#mount)
   - [tag](#tag)
   - [push](#push)
   - [拷贝](#拷贝)
@@ -112,6 +113,14 @@ docker run -d ${镜像名} sleep 99999
 ```
 
 这个命令可以让镜像run的服务沉睡一段时间
+
+### mount
+
+当我们run一个java spring镜像，需要用指定的application.yml 挂载进容器中：
+
+```sh
+docker run -d -p ${外部端口}:${内部端口} -v ${宿主机路径}:${容器内挂载路径} ${镜像名}
+```
 
 ## tag
 
