@@ -79,7 +79,7 @@ kubectgl exec -it ${pod name} -n ${namespace} bash
 ## 删掉pod
 
 ```shell
-kubectl delete po ${pod name}
+kubectl delete po ${pod name} -n ${namespace}
 ```
 
 ## 导出k8s中clickhouse数据库的数据 存为.csv
