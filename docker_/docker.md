@@ -17,6 +17,10 @@
   - [push](#push)
   - [拷贝](#拷贝)
   - [commit](#commit)
+  - [swarm](#swarm)
+    - [init](#init)
+    - [deploy](#deploy)
+    - [service](#service)
 
 ---
 
@@ -160,4 +164,24 @@ docker cp ${pod id}:${pod 内 jar的绝对路径} ${拷贝出来的绝对路径 
 
 ```bash
 docker commit  ${containerID}
+```
+
+## swarm
+
+### init
+
+```sh
+docker swarm init
+```
+
+### deploy
+
+```sh
+docker stack deploy ${任意名称} -c ${docker compose yaml}
+```
+
+### service
+
+```sh
+docker service ls
 ```
