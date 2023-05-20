@@ -73,7 +73,7 @@ kubectl get ns
 ## 进入pod
 
 ``` shell
-kubectgl exec -it ${pod name} -n ${namespace} bash
+kubectl exec -it ${pod name} -n ${namespace} bash
 ```
 
 ## 删掉pod

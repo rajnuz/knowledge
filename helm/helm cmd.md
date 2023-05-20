@@ -15,7 +15,7 @@ helm install janus janus --debug --dry-run -n default
 ```
 
 `--debug`: 可以将install的内容打印出日志
-`--dry-run`：不会真正安装而是模拟安装，用于测试helm chart
+`--dry-run`：不会真正安装而是模拟安装，用于测试helm chart,dry run还提供一个能力，可以将整个helmchart生成的kubectl产物预览，然后使用可以使用kubectl apply手动安装
 `-n` 指定namespace
 例子中第一个janus是安装后期望helm release的名字，第二个是需要部署的文件夹的名字。例如我的我的Chart.yaml保存在/aaa/janus/路径下（即/aaa/janus/Chart.yaml），那我第二个参数应该是 /aaa/janus/
 
