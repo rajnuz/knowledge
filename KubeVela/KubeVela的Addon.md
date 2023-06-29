@@ -208,6 +208,12 @@ spec:
 vela def init stateless -t component --template-yaml ./stateless.yaml -o stateless.cue
 ```
 
+或者使用cue命令也可以转换k8s manifest yaml成cue
+
+```sh
+cue import ${k8s yaml}
+```
+
 得到的stateless.cue
 
 ```txt
@@ -247,6 +253,7 @@ template: {
 ```sh
 cue vet ${cue file}
 ```
+
 或
 
 ```sh
@@ -277,3 +284,4 @@ vela addon enable ${addon name} --dry-run
 
 注意， 当执行`vela addon enbale`时,`defination/`路径下的文件会执行`vela def apply`命令添加新的Defination。使用这些Defination的办法是在Application.yaml中引用, parameter直接在Application.yaml的properties中传入。
 
+如果用户使用Addon时有定制化较重的场景，建议将相关内容作为Defination提出来
