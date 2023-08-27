@@ -166,3 +166,13 @@ kubectl get statefulset ${statefulset 名字} -n ${namespace} -o yaml
 查看pod
 kubectl get pod ${pod 名字} -n ${namespace} -o yaml
 ```
+
+## 查看资源是否归属于命名空间，哪些不在命名空间
+
+```sh
+# 位于名字空间中的资源
+kubectl api-resources --namespaced=true
+
+# 不在名字空间中的资源
+kubectl api-resources --namespaced=false
+```

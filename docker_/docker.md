@@ -11,6 +11,8 @@
       - [gremlin](#gremlin)
       - [clickhouse](#clickhouse)
       - [mariadb](#mariadb)
+      - [rabbitmq](#rabbitmq)
+      - [kafka](#kafka)
     - [sleep](#sleep)
     - [mount](#mount)
   - [tag](#tag)
@@ -106,6 +108,25 @@ docker run -d --name docker-clickhouse -p 8123:8123 -p 9000:9000 -p 9009:9009 -v
 
 ```bash
 docker run --name docker-mariadb -p 13306:3306 -v //d/dockerVolume/data/mariadb:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d mariadb:latest
+```
+
+#### rabbitmq
+
+```sh
+docker run -d -p 5672:5672 -p 15672:15672 --name my-rabbit rabbitmq:3-management
+```
+
+#### kafka
+
+```sh
+# 可能需要提前启动zookeeper容器
+docker run --name docker-kafka -p 9092:9092  -e KAFKA_ZOOKEEPER_CONNECT=127.0.0.1:2181 -e ALLOW_PLAINTEXT_LISTENER=yes -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092 -e KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092 -d  bitnami/kafka
+```
+
+#### local registry
+
+```sh
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
 ```
 
 ### sleep
