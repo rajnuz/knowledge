@@ -11,6 +11,7 @@
       - [修改页面默认显示语言](#修改页面默认显示语言)
   - [Docker-compose](#docker-compose)
     - [添加依赖](#添加依赖)
+    - [更新SECRET_KEY](#更新secret_key)
 
 <!-- /code_chunk_output -->
 
@@ -125,3 +126,39 @@ docker-compose -f docker-compose-non-dev.yml up -d
 file:./docker/drivers/clickhouse-driver-0.2.0.tar.gz
 file:./docker/drivers/clickhouse-sqlalchemy-0.2.4.tar.gz
 ```
+
+这种方式安装的包在容器中的路径：
+
+```txt
+/usr/local/lib/python3.9/site-packages#
+```
+
+### 更新SECRET_KEY
+
+我们例子中使用的是non-dev版本的docker-compose，参考官网的说法生产环境下的superset如果想正常使用必须在congig中添加一个SECRET_KEY变量。
+
+docker修改源码中的`docker/pythonpath_dev/superset_config.py`文件，在文件中添加 下面内容（默认没有）
+
+```txt
+SECRET_KEY = "xxxxxxxxxxxxxxxxx"
+```
+
+SECRET_KEY 的值可以通过 `openssl rand -base64 42`命令生成
+
+有可能我们在开始的时候由于未注意修改数据库造成有些添加的数据库在数据库中使用的是错误的key加密过的password。
+可以进入postgresql容器中，使用psql查看
+
+```sh
+# 登录superset数据库
+psql -d superset -U superset -W
+#会提示要求输入password，password是superset
+
+#执行sql查询数据库存储的数据链接
+select daabase_name, password from dbs
+```
+
+结果例子
+
+![picture 1](asset_IMG/superset_deployment/IMG_20231017-135245274.png)  
+
+需要注意的是 docker-compose down命令只会卸载容器，不会删除volume，这种情况下重新up这些数据还存在。如果想彻底清除，需要执行 `docker compose -f docker-compose-non-dev.yml down -v`
