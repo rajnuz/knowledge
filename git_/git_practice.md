@@ -6,6 +6,8 @@
 
 - [git practice](#git-practice)
   - [场景1](#场景1)
+    - [方法1](#方法1)
+    - [方法2](#方法2)
   - [场景2](#场景2)
 
 <!-- /code_chunk_output -->
@@ -56,6 +58,10 @@ git pull upstream
 git merge upstream/main main
 ```
 
+此时可以有两种操作
+
+### 方法1
+
 切换到feature分支，尝试rebase（feature分支本来的base是feature分支创建时的commit，rebase会将尝试目标分支最新的状态作为feature的base，在这个场景中，即我们期望将在Repo B中的修改应用到开发期间Repo A的新提交之后）
 
 ```sh
@@ -88,6 +94,23 @@ git push origin main
 Merge Request，尝试将Repo B的feature分支合并进Repo A的main分支。
 
 整个过程中，可以保持Repo B的main分支与Repo A的main分支一直同步
+
+### 方法2
+
+切到feature分支, 将更新过的Repo B的main合并进feat分支，并push到origin feature
+
+```sh
+git checkout <feature>
+
+git merge main
+
+git push origin
+```
+
+此时在feature分支上会新增merge的commit，然后可以进行merge request。在进行merge request时通过勾选`Squash commits when merge request is accepted`这样可以在merge时提醒审核者合并为一个commit
+
+后面的内容和方法1类似
+
 
 ## 场景2
 
