@@ -136,12 +136,17 @@ Evironment新增`FLASK_APP=superset;FLASK_ENV=development`
 Python interpreter：如果之前没配置的话就参考上面的先创建venv，然后这里会新增这个项目的venv的Python
 
 Ubuntu环境pycharm的配置方式区别：
+Script ：找到项目 `venv/bin/flask.py`
+Paramter: `run -p 8088 --with-threads --reload --debugger --debug`
+Evironment新增`FLASK_APP=superset;FLASK_ENV=development`
 
 #### Superset后端Swagger
 
 `http://127.0.0.1:8088/swagger/v1`
 
 #### 运行前端
+
+只在ubuntu环境下面成功，windows环境下有报错
 
 进入superset-frontend目录，
 
