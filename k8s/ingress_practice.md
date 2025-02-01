@@ -90,7 +90,7 @@ metadata:
       if ($request_uri ~* "^/nihnr/([^/]+)") {                
         set $prefix $1;
       }                                                
-      proxy_set_header X-Forwarded-Prefix /$prefix;                                                                                                                                     
+      proxy_set_header X-Forwarded-Prefix /nihnr/$prefix;                                                                                                                                     
       rewrite ^/nihnr/excel/(.*)$ /api/$1 break;        
       rewrite ^/nihnr/(.*)$ /$1 break;                                                                              
   creationTimestamp: "2024-05-10T03:29:23Z"                                                                                                                        
